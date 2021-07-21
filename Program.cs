@@ -1,9 +1,7 @@
 ﻿using System;
-using Xero.NetStandard.OAuth2.Model;
 using Xero.NetStandard.OAuth2.Api;
 using Xero.NetStandard.OAuth2.Client;
 using Xero.NetStandard.OAuth2.Config;
-using Xero.NetStandard.OAuth2.Token;
 using System.Threading.Tasks;
 
 namespace AsyncMain
@@ -22,7 +20,7 @@ namespace AsyncMain
             XeroConfiguration XeroConfig = new XeroConfiguration
             {
                 ClientId = System.Environment.GetEnvironmentVariable("CLIENT_ID"),
-                ClientSecret = System.Environment.GetEnvironmentVariable("CLIENT_SECRET"),
+                ClientSecret = System.Environment.GetEnvironmentVariable("CLIENT_SECRET")
             };
 
             var client = new XeroClient(XeroConfig);
